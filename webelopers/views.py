@@ -23,10 +23,5 @@ def register(request):
     password1 = request.POST['password1']
     password2 = request.POST['password2']
     user = User(first_name, last_name, username, email, password1)
-    print(first_name)
-    print(last_name)
-    print(username)
-    print(email)
-    print(password1)
     user.save()
     return HttpResponseRedirect(reverse('webelopers:register'))
