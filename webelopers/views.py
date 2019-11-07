@@ -1,8 +1,8 @@
+from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
 from django.views import generic
-from .models import *
 
 
 # Create your views here.
@@ -22,7 +22,8 @@ def register(request):
     email = request.POST['email']
     password1 = request.POST['password1']
     password2 = request.POST['password2']
-    user = User(first_name, last_name, username, email, password1)
+    user = User(username=username, first_name=first_name, last_name=last_name, email=email, password=password1)
+    user.set_password(password1)
     user.save()
     return HttpResponseRedirect(reverse('webelopers:register'))
 
