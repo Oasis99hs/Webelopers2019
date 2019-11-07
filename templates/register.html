@@ -19,7 +19,7 @@
         <div class="register row">
             <div class="col s12">
                 <div class="card-panel register">
-                    <form action="{% url 'webelopers:registered' %}" method="POST">
+                    <form id="register_form" action="{% url 'webelopers:registered' %}" method="POST">
                         {% csrf_token %}
                         <div class="row">
                             <div class="input-field col s6">
