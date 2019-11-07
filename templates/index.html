@@ -5,7 +5,7 @@
 {% block navbar %}
     <ul class="left">
         <li><a id="login" href="">Login</a></li>
-        <li><a id="register" href="">Register</a></li>
+        <li><a id="register" href="{% url 'webelopers:register' %}">Register</a></li>
         <li><a id="homepage" href="{% url 'webelopers:index' %}">Homepage</a></li>
     </ul>
 {% endblock %}

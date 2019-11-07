@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block title %}
+    Register
+{% endblock %}
+{% block navbar %}
+    <ul class="left">
+        <li><a id="login" href="">Login</a></li>
+        <li><a id="register" href="{% url 'webelopers:register' %}">Register</a></li>
+        <li><a id="homepage" href="{% url 'webelopers:index' %}">Homepage</a></li>
+    </ul>
+{% endblock %}
+<style>
+    .register {
+        transform: translate(0, 35%);
+    }
+</style>
+{% block section %}
+    <div class="container">
+        <div class="register row">
+            <div class="col s12">
+                <div class="card-panel register">
+                    <form action="{% url 'webelopers:registered' %}" method="POST">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="first_name" name="first_name" type="text" class="validate">
+                                <label for="first_name">First Name</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="last_name" name="last_name" type="text" class="validate">
+                                <label for="last_name">Last Name</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="username" name="username" type="text" class="validate">
+                                <label for="username">Username</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="email" name="email" type="email" class="validate">
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="password1" name="password1" type="password" class="validate">
+                                <label for="password1">Password</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="password2" name="password2" type="password" class="validate">
+                                <label for="password2">Repeat Password</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="waves-effect waves-light btn">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
