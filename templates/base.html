@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js"></script>
+    <style>
+        .rtl {
+            direction: rtl;
+        }
+    </style>
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+</head>
+<body>
+<div class="navbar-fixed" id=”navbar”>
+    <nav class="nav-wrapper row blue darken-2">
+        <div id="navbar">
+            <div class="col s3 center-align">
+                <ul id="nav-mobile" class="left">
+                    <li><a id=”login”>Login</a></li>
+                    <li><a id=”register”>Register</a></li>
+                    <li><a id=”homepage” href=”{% url 'webelopers:index' %}”>Homepage</a></li>
+                </ul>
+            </div>
+            <div class="col s9 right-align rtl">
+                سلام. به سامانه ی انتخاب واحد مجازی خوش آمدید.
+            </div>
+        </div>
+    </nav>
+</div>
+</body>
+</html>
