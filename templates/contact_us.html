@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %}
+    Contact Us
+{% endblock %}
+{% block navbar %}
+    <ul class="left">
+        <li><a id="login" href="">Login</a></li>
+        <li><a id="register" href="{% url 'webelopers:register' %}">Register</a></li>
+        <li><a id="homepage" href="{% url 'webelopers:index' %}">Homepage</a></li>
+        <li><a id="contact_us" href="{% url 'webelopers:contact_us' %}">Contact Us</a></li>
+    </ul>
+{% endblock %}
+{% block section %}
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <div class="card-panel">
+                    <form id="register_form" action="{% url 'webelopers:sent' %}" method="POST">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="title" name="title" type="text" class="validate" aria-required="true">
+                                <label for="title">Title</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="email" name="email" type="email" class="validate" aria-required="true">
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea id="text" name="text" class="validate" aria-required="true"></textarea>
+                                <label for="text">Text</label>
+                            </div>
+                        </div>
+                        <button name="submit" type="submit" class="waves-effect waves-light btn">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

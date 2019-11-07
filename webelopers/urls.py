@@ -6,4 +6,6 @@ urlpatterns = [
     path('', IndexView.as_view(), name='index'),
     path('register/', RegisterView.as_view(), name='register'),
     path('registered/', register, name='registered'),
+    path('contact_us/', ContactView.as_view(), name='contact_us'),
+    path('sent/', sent, name='sent'),
 ]

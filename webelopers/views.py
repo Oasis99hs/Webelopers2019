@@ -25,3 +25,14 @@ def register(request):
     user = User(first_name, last_name, username, email, password1)
     user.save()
     return HttpResponseRedirect(reverse('webelopers:register'))
+
+
+class ContactView(generic.TemplateView):
+    template_name = 'contact_us.html'
+
+
+def sent(request):
+    title = request.POST['title']
+    email = request.POST['email']
+    text = request.POST['text']
+    return render(request, 'sent.html')
