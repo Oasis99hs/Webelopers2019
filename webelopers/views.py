@@ -55,7 +55,7 @@ def sent(request):
         subject = title
         message = text
         email_from = EMAIL_HOST_USER
-        email_to = email
+        email_to = 'webe19lopers@gmail.com'
         send_mail(subject, message, email_from, email_to)
         return render(request, 'sent.html')
     else:
