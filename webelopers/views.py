@@ -1,9 +1,8 @@
 from django.contrib.auth.models import User
-from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.views import generic
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 
 
 # Create your views here.
@@ -12,21 +11,31 @@ class IndexView(generic.TemplateView):
     template_name = 'index.html'
 
 
-class RegisterView(generic.TemplateView):
-    template_name = 'register.html'
-
-
 def register(request):
+    if not request.POST:
+        return render(request, 'register.html')
     first_name = request.POST['first_name']
     last_name = request.POST['last_name']
     username = request.POST['username']
     email = request.POST['email']
     password1 = request.POST['password1']
     password2 = request.POST['password2']
-    user = User(username=username, first_name=first_name, last_name=last_name, email=email, password=password1)
-    user.set_password(password1)
-    user.save()
-    return HttpResponseRedirect(reverse('webelopers:register'))
+    context = {}
+    users = User.objects.all().filter(username=username)
+    valid = True
+    if users.count != 0:
+        context['username_invalid'] = True
+        valid = False
+    if password1 != password2:
+        context['password_invalid'] = True
+        valid = False
+    if valid:
+        user = User(username=username, first_name=first_name, last_name=last_name, email=email, password=password1)
+        user.set_password(password1)
+        user.save()
+        return redirect('webelopers:register')
+    else:
+        return render(request, 'register.html', context)
 
 
 class ContactView(generic.TemplateView):
@@ -54,3 +63,8 @@ def login_user(request):
         return redirect("/")
     else:
         return render(request, "login.html", {"error": True})
+
+
+def logout_user(request):
+    logout(request)
+    return redirect('/')

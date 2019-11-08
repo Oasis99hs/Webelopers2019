@@ -2,20 +2,12 @@
 {% block title %}
     Register
 {% endblock %}
-{% block navbar %}
-    <ul class="left">
-        <li><a id="login" href="">Login</a></li>
-        <li><a id="register" href="{% url 'webelopers:register' %}">Register</a></li>
-        <li><a id="homepage" href="{% url 'webelopers:index' %}">Homepage</a></li>
-        <li><a id="contact_us" href="{% url 'webelopers:contact_us' %}">Contact Us</a></li>
-    </ul>
-{% endblock %}
 {% block section %}
     <div class="container">
         <div class="row">
             <div class="col s12">
                 <div class="card-panel">
-                    <form id="register_form" action="{% url 'webelopers:registered' %}" method="POST">
+                    <form id="register_form" action="{% url 'webelopers:register' %}" method="POST">
                         {% csrf_token %}
                         <div class="row">
                             <div class="input-field col s6">
@@ -35,22 +27,30 @@
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="email" name="email" type="email" class="validate"required>
+                                <input id="email" name="email" type="email" class="validate" required>
                                 <label for="email">Email</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s6">
-                                <input id="password1" name="password1" type="password" class="validate"required>
+                                <input id="password1" name="password1" type="password" class="validate" required>
                                 <label for="password1">Password</label>
                             </div>
                             <div class="input-field col s6">
-                                <input id="password2" name="password2" type="password" class="validate"required>
+                                <input id="password2" name="password2" type="password" class="validate" required>
                                 <label for="password2">Repeat Password</label>
                             </div>
                         </div>
                         <button name="submit" type="submit" class="waves-effect waves-light btn">Register</button>
                     </form>
+                    <div id="errors">
+                        {% if username_invalid %}
+                            نام کاربری شما در سیستم موجود است
+                        {% endif %}
+                        {% if password_invalid %}
+                            گذرواژه و تکرار گذرواژه یکسان نیستند
+                        {% endif %}
+                    </div>
                 </div>
             </div>
         </div>
