@@ -26,7 +26,6 @@ class Course(models.Model):
         (3, 'Tuesday'),
         (4, 'Wednesday'),
     )
-
     department = models.CharField(max_length=30)
     name = models.CharField(max_length=30)
     course_number = models.IntegerField()
@@ -36,5 +35,6 @@ class Course(models.Model):
     end_time = models.TimeField()
     first_day = models.IntegerField(choices=DAY_OF_THE_WEEK)
     second_day = models.IntegerField(choices=DAY_OF_THE_WEEK, null=True, blank=True)
+    exam_date = models.DateField()
 
 
