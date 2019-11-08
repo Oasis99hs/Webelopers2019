@@ -89,3 +89,8 @@ def edit_profile(request):
         user.last_name = last_name
     user.save()
     return redirect('webelopers:profile')
+
+
+@login_required(login_url='../../login/')
+def panel(request):
+    return render(request, 'panel.html')

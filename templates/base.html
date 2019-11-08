@@ -21,11 +21,12 @@
 <nav class="blue darken-2">
     <div class="nav-wrapper row">
         <div id="navbar">
-            <div class="col s3">
+            <div class="col s5">
                 <ul class="left">
                     {% if request.user.is_authenticated %}
                         <li><a id="logout" href="{% url 'webelopers:logout' %}">Logout</a></li>
                         <li><a id="profile" href="{% url 'webelopers:profile' %}">Profile</a></li>
+                        <li><a id="panel" href="{% url 'webelopers:panel' %}">Panel</a></li>
                     {% else %}
                         <li><a id="login" href="{% url 'webelopers:login' %}">Login</a></li>
                         <li><a id="register" href="{% url 'webelopers:register' %}">Register</a></li>
@@ -34,7 +35,7 @@
                     <li><a id="contact_us" href="{% url 'webelopers:contact_us' %}">Contact Us</a></li>
                 </ul>
             </div>
-            <div class="col s9 rtl">
+            <div class="col s7 rtl">
                 سلام. به سامانه‌ی انتخاب واحد مجازی خوش آمدید.
             </div>
         </div>
