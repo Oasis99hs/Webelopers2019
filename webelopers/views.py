@@ -22,9 +22,9 @@ def register(request):
     password1 = request.POST['password1']
     password2 = request.POST['password2']
     context = {}
-    users = User.objects.all().filter(username=username)
+    users = User.objects.filter(username=username)
     valid = True
-    if users.count != 0:
+    if users:
         context['username_invalid'] = True
         valid = False
     if password1 != password2:
@@ -71,6 +71,16 @@ def logout_user(request):
     return redirect('/')
 
 
-@login_required(login_url='login/')
+@login_required(login_url='../login/')
 def profile(request):
     return render(request, 'profile.html')
+
+
+@login_required(login_url='../login/')
+def edit_profile(request):
+    if not request.POST:
+        return render(request, 'edit_profile.html')
+    firstname = request.POST['first_name']
+    lastname = request.POST['last_name']
+    print(firstname, lastname)
+    return redirect('webelopers:profile')
