@@ -80,7 +80,12 @@ def profile(request):
 def edit_profile(request):
     if not request.POST:
         return render(request, 'edit_profile.html')
-    firstname = request.POST['first_name']
-    lastname = request.POST['last_name']
-    print(firstname, lastname)
+    first_name = request.POST['first_name']
+    last_name = request.POST['last_name']
+    user = User.objects.get(username=request.user.username)
+    if first_name != '':
+        user.first_name = first_name
+    if last_name != '':
+        user.last_name = last_name
+    user.save()
     return redirect('webelopers:profile')
