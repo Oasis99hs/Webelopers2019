@@ -25,7 +25,7 @@
                 <ul class="left">
                     {% if request.user.is_authenticated %}
                         <li><a id="logout" href="{% url 'webelopers:logout' %}">Logout</a></li>
-                        <li><a id="profile" href="">Profile</a></li>
+                        <li><a id="profile" href="{% url 'webelopers:profile' %}">Profile</a></li>
                     {% else %}
                         <li><a id="login" href="{% url 'webelopers:login' %}">Login</a></li>
                         <li><a id="register" href="{% url 'webelopers:register' %}">Register</a></li>
