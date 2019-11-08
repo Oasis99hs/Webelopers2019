@@ -1,10 +1,12 @@
 from django.contrib.auth.models import User
+from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.views import generic
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required, user_passes_test
 from .models import *
+from WebelopersContest2019.settings import EMAIL_HOST_USER
 
 
 # Create your views here.
@@ -50,6 +52,11 @@ def sent(request):
     email = request.POST['email']
     text = request.POST['text']
     if 250 > len(text) >= 10:
+        subject = title
+        message = text
+        email_from = EMAIL_HOST_USER
+        email_to = email
+        send_mail(subject, message, email_from, email_to)
         return render(request, 'sent.html')
     else:
         return redirect('webelopers:contact_us')

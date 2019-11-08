@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50a5b18f-acc6-408c-b5d2-07620c3d9fd6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/make_new_course.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/make_new_course.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webelopers/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/webelopers/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webelopers/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/webelopers/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebelopersContest2019/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebelopersContest2019/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webelopers/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/webelopers/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -84,19 +80,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/make_new_course.html">
+        <entry file="file://$PROJECT_DIR$/WebelopersContest2019/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="52" column="60" selection-start-line="52" selection-start-column="60" selection-end-line="52" selection-end-column="60" />
+            <state relative-caret-position="359">
+              <caret line="115" column="16" lean-forward="true" selection-start-line="115" selection-start-column="16" selection-end-line="115" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/make_new_course.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="353">
+              <caret line="52" column="72" lean-forward="true" selection-start-line="52" selection-start-column="72" selection-end-line="52" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webelopers/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="101" column="29" selection-start-line="101" selection-start-column="29" selection-end-line="101" selection-end-column="29" />
+            <state relative-caret-position="323">
+              <caret line="59" column="19" lean-forward="true" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
@@ -113,11 +118,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webelopers/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="104">
+              <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -162,7 +167,6 @@
         <option value="$PROJECT_DIR$/WebelopersContest2019/urls.py" />
         <option value="$PROJECT_DIR$/templates/sign-up.html" />
         <option value="$PROJECT_DIR$/templates/sign_up.html" />
-        <option value="$PROJECT_DIR$/WebelopersContest2019/settings.py" />
         <option value="$PROJECT_DIR$/templates/sent.html" />
         <option value="$PROJECT_DIR$/templates/contact_us.html" />
         <option value="$PROJECT_DIR$/templates/login.html" />
@@ -175,9 +179,10 @@
         <option value="$PROJECT_DIR$/webelopers/urls.py" />
         <option value="$PROJECT_DIR$/templates/courses.html" />
         <option value="$PROJECT_DIR$/templates/panel.html" />
-        <option value="$PROJECT_DIR$/webelopers/views.py" />
         <option value="$PROJECT_DIR$/templates/make_new_course.html" />
         <option value="$PROJECT_DIR$/webelopers/models.py" />
+        <option value="$PROJECT_DIR$/webelopers/views.py" />
+        <option value="$PROJECT_DIR$/WebelopersContest2019/settings.py" />
       </list>
     </option>
   </component>
@@ -290,7 +295,7 @@
       <workItem from="1573117524564" duration="14234000" />
       <workItem from="1573136624694" duration="1809000" />
       <workItem from="1573193704076" duration="207000" />
-      <workItem from="1573197108328" duration="19816000" />
+      <workItem from="1573197108328" duration="21045000" />
     </task>
     <task id="LOCAL-00001" summary="'16'">
       <created>1573136817116</created>
@@ -317,13 +322,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38345000" />
+    <option name="totallyTimeSpent" value="39574000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26626426" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26626426" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -337,7 +342,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32872504" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3281471" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3281471" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32872504" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32956153" />
       <window_info anchor="bottom" id="manage.py@WebelopersContest2019" order="14" weight="0.34512022" />
@@ -417,13 +422,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="356" column="6" selection-start-line="356" selection-start-column="6" selection-end-line="356" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebelopersContest2019/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="89" column="4" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -513,23 +511,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webelopers/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="101" column="29" selection-start-line="101" selection-start-column="29" selection-end-line="101" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/make_new_course.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="52" column="60" selection-start-line="52" selection-start-column="60" selection-end-line="52" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Python 3/Lib/site-packages/django/db/models/fields/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -539,8 +520,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/webelopers/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="104">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/make_new_course.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="52" column="72" lean-forward="true" selection-start-line="52" selection-start-column="72" selection-end-line="52" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebelopersContest2019/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="115" column="16" lean-forward="true" selection-start-line="115" selection-start-column="16" selection-end-line="115" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webelopers/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="59" column="19" lean-forward="true" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
