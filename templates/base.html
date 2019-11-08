@@ -22,8 +22,16 @@
     <div class="nav-wrapper row">
         <div id="navbar">
             <div class="col s3">
-                {% block navbar %}
-                {% endblock %}
+                <ul class="left">
+                    {% if request.user.is_authenticated %}
+                        <li><a id="logout" href="">Logout</a></li>
+                    {% else %}
+                        <li><a id="login" href="{% url 'webelopers:login' %}">Login</a></li>
+                        <li><a id="register" href="{% url 'webelopers:register' %}">Register</a></li>
+                    {% endif %}
+                    <li><a id="homepage" href="{% url 'webelopers:index' %}">Homepage</a></li>
+                    <li><a id="contact_us" href="{% url 'webelopers:contact_us' %}">Contact Us</a></li>
+                </ul>
             </div>
             <div class="col s9 rtl">
                 سلام. به سامانه‌ی انتخاب واحد مجازی خوش آمدید.

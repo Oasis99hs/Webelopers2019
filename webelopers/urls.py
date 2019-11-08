@@ -8,4 +8,5 @@ urlpatterns = [
     path('registered/', register, name='registered'),
     path('contact_us/', ContactView.as_view(), name='contact_us'),
     path('sent/', sent, name='sent'),
+    path('login/', login_user, name='login'),
 ]
