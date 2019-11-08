@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.views import generic
 
@@ -36,4 +36,7 @@ def sent(request):
     title = request.POST['title']
     email = request.POST['email']
     text = request.POST['text']
-    return render(request, 'sent.html')
+    if 250 > len(text) >= 10:
+        return render(request, 'sent.html')
+    else:
+        return redirect('webelopers:contact_us')

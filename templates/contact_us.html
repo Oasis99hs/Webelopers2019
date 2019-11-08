@@ -19,19 +19,19 @@
                         {% csrf_token %}
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="title" name="title" type="text" class="validate" aria-required="true">
+                                <input id="title" name="title" required type="text" class="validate" aria-required="true">
                                 <label for="title">Title</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="email" name="email" type="email" class="validate" aria-required="true">
+                                <input id="email" name="email" required type="email" class="validate" aria-required="true">
                                 <label for="email">Email</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <textarea id="text" name="text" class="validate" aria-required="true"></textarea>
+                                <textarea id="text" name="text" required class="validate" aria-required="true"></textarea>
                                 <label for="text">Text</label>
                             </div>
                         </div>
