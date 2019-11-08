@@ -118,3 +118,7 @@ def make_new_course(request):
                         start_time=start_time, end_time=end_time, first_day=first_day)
     course.save()
     return redirect('webelopers:panel')
+
+
+def courses(request):
+    return render(request, 'courses.html', {'courses': Course.objects.all()})
