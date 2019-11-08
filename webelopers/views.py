@@ -4,9 +4,11 @@ from django.urls import reverse
 from django.views import generic
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from .models import *
 
 
 # Create your views here.
+
 
 class IndexView(generic.TemplateView):
     template_name = 'index.html'
@@ -94,3 +96,25 @@ def edit_profile(request):
 @login_required(login_url='../../login/')
 def panel(request):
     return render(request, 'panel.html')
+
+
+@login_required(login_url='../../../login/')
+def make_new_course(request):
+    if not request.POST:
+        return render(request, 'make_new_course.html')
+    department = request.POST['department']
+    name = request.POST['name']
+    course_number = request.POST['course_number']
+    group_number = request.POST['group_number']
+    start_time = request.POST['start_time']
+    end_time = request.POST['end_time']
+    first_day = request.POST['first_day']
+    if request.POST.get('second_day', False):
+        second_day = request.POST['second_day']
+        course = Course(department=department, name=name, course_number=course_number, group_number=group_number,
+                        start_time=start_time, end_time=end_time, first_day=first_day, second_day=second_day)
+    else:
+        course = Course(department=department, name=name, course_number=course_number, group_number=group_number,
+                        start_time=start_time, end_time=end_time, first_day=first_day)
+    course.save()
+    return redirect('webelopers:panel')

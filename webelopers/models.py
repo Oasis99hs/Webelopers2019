@@ -1,6 +1,5 @@
 from django.db import models
 
-
 # Create your models here.
 
 # class User(models.Model):
@@ -17,3 +16,24 @@ from django.db import models
 #         self.username = username
 #         self.email = email
 #         self.password = password
+
+
+class Course(models.Model):
+    DAY_OF_THE_WEEK = (
+        (0, 'Saturday'),
+        (1, 'Sunday'),
+        (2, 'Monday'),
+        (3, 'Tuesday'),
+        (4, 'Wednesday'),
+    )
+
+    department = models.CharField(max_length=30)
+    name = models.CharField(max_length=30)
+    course_number = models.IntegerField()
+    group_number = models.IntegerField()
+    start_time = models.TimeField()
+    end_time = models.TimeField()
+    first_day = models.IntegerField(choices=DAY_OF_THE_WEEK)
+    second_day = models.IntegerField(choices=DAY_OF_THE_WEEK, null=True, blank=True)
+
+

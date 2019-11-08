@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block title %}
+    Make New Course
+{% endblock %}
+{% block section %}
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <div class="card-panel">
+                    <form id="make_course" action="{% url 'webelopers:make_new_course' %}" method="POST">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="department" name="department" type="text" class="validate" required>
+                                <label for="department">Department</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="name" name="name" type="text" class="validate" required>
+                                <label for="name">Name</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="course_number" name="course_number" type="number" class="validate" required>
+                                <label for="course_number">Course Number</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="group_number" name="group_number" type="number" class="validate" required>
+                                <label for="group_number">Group Number</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="teacher" name="teacher" type="text" class="validate" required>
+                                <label for="teacher">Teacher</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input placeholder="Start Time" id="start_time" name="start_time" type="time"
+                                       class="validate"
+                                       required>
+                                <label for="start_time">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Start Time</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="end_time" name="end_time" type="time" class="validate" required>
+                                <label for="end_time">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End Time</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <select name="first_day" required>
+                                    <option value="" disabled selected >First Day</option>
+                                    <option value="0">Saturday</option>
+                                    <option value="1">Sunday</option>
+                                    <option value="2">Monday</option>
+                                    <option value="3">Tuesday</option>
+                                    <option value="4">Wednesday</option>
+                                </select>
+                            </div>
+                            <div class="input-field col s6">
+                                <select name="second_day">
+                                    <option value="" disabled selected>Second Day</option>
+                                    <option value="0">Saturday</option>
+                                    <option value="1">Sunday</option>
+                                    <option value="2">Monday</option>
+                                    <option value="3">Tuesday</option>
+                                    <option value="4">Wednesday</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button name="submit" type="submit" class="waves-effect waves-light btn">Create</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

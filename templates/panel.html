@@ -2,3 +2,14 @@
 {% block title %}
     Panel
 {% endblock %}
+{% block section %}
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <div class="card-panel">
+                    <a id="make_new_course" href="{% url 'webelopers:make_new_course' %}">Make New Course</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
