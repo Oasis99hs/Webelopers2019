@@ -106,16 +106,18 @@ def make_new_course(request):
     name = request.POST['name']
     course_number = request.POST['course_number']
     group_number = request.POST['group_number']
+    teacher = request.POST['teacher']
     start_time = request.POST['start_time']
     end_time = request.POST['end_time']
     first_day = request.POST['first_day']
     if request.POST.get('second_day', False):
         second_day = request.POST['second_day']
         course = Course(department=department, name=name, course_number=course_number, group_number=group_number,
-                        start_time=start_time, end_time=end_time, first_day=first_day, second_day=second_day)
+                        teacher=teacher, start_time=start_time, end_time=end_time, first_day=first_day,
+                        second_day=second_day)
     else:
         course = Course(department=department, name=name, course_number=course_number, group_number=group_number,
-                        start_time=start_time, end_time=end_time, first_day=first_day)
+                        teacher=teacher, start_time=start_time, end_time=end_time, first_day=first_day)
     course.save()
     return redirect('webelopers:panel')
 
