@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.views import generic
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, user_passes_test
 from .models import *
 
 
@@ -98,7 +98,7 @@ def panel(request):
     return render(request, 'panel.html')
 
 
-@login_required(login_url='../../../login/')
+@user_passes_test(lambda u: u.is_superuser)
 def make_new_course(request):
     if not request.POST:
         return render(request, 'make_new_course.html')

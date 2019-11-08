@@ -7,7 +7,9 @@
         <div class="row">
             <div class="col s12">
                 <div class="card-panel">
-                    <a id="make_new_course" href="{% url 'webelopers:make_new_course' %}">Make New Course</a>
+                    {% if request.user.is_superuser %}
+                        <a id="make_new_course" href="{% url 'webelopers:make_new_course' %}">Make New Course</a>
+                    {% endif %}
                     <a id="courses" href="{% url 'webelopers:courses' %}">All Courses</a>
                 </div>
             </div>
